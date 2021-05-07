@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- m(밀리) =10^-3 mm,mg, u(마이크로) =10^-6 ug, um , n(나노) =10^-9 ng,nm, p(피코) = 10^-12 -->
+    <!-- K(킬로) =10^3 , M(메가) =10^6 MB, 107.7MHz, G(기가) =10^9 , T(테라) =10^12-->
+    <script>
+        function test1() {
+            alert('test1 호출');
+        }
+        function test2() {
+            // 1초마다 함수 호출
+            var time = setInterval(timer, 1000);
+        }
+        function timer() {
+
+            var date = new Date();
+            var ele = document.getElementById('id1');
+            ele.innerHTML = date;
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="setTimeout(test1, 2000)">2뒤 함수 호출</button>
+
+    <button onclick="test1()">test호출</button>
+
+    <div id='id1'>
+
+    </div>
+
+</body>
+
+</html>
